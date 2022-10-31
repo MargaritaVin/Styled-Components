@@ -16,10 +16,10 @@ const ButtonBox = styled.div`
   justify-content: space-between;
   margin 0 0 50px;
 `;
-const AlerrBox = styled.div`
+const AlertBox = styled.div`
   padding: 0 120px;
 `;
-const AlerrButtonBox = styled.div`
+const AlertButtonBox = styled.div`
   margin: 0 0 50px;
 `;
 
@@ -40,10 +40,10 @@ function App() {
       <Button color="secondary" size="small">Secondary small button</Button>
       <Button color="primary" disabled>Disabled button</Button>
     </ButtonBox>
-    <AlerrButtonBox>
+    <AlertButtonBox>
       <button onClick={handleOpen}>Open alert</button>
-    </AlerrButtonBox>
-    <AlerrBox>
+    </AlertButtonBox>
+    <AlertBox>
       {isOpenedAlert && 
       <Alert color="primary" onClose={handleClose}>
         Join Tripma today and save up to 20% on your flight using code TRAVEL at checkout. Promotion valid for new users only.
@@ -56,7 +56,7 @@ function App() {
       <Alert color="warning" onClose={handleClose}>
         Tripma will be undergoing routine maintenance in 30 minutes. We expect this to take no longer than 15 minutes. Stay up to date at status.tripma.com.
       </Alert>}
-    </AlerrBox>
+    </AlertBox>
     </>
   );
 }
