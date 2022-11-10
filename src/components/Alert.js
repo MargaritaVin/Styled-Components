@@ -26,14 +26,18 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: ${(props) => {
-    if(props.color === "primary") {
-        return "#605DEC;";
-    } if (props.color === "error") {
-        return "#EB5757;";
-    } if (props.color === "warning") {
-        return "#FFD12F;";
+    switch(props.color) {
+        case "primary": {
+            return "#605DEC;";
+        }
+        case "error": {
+            return "#EB5757;";
+        }
+        case "warning": {
+            return "#FFD12F;";
+        }
     }
-    }};
+}};
 `;
 
 const Alert = ({color, onClose, children}) => {
